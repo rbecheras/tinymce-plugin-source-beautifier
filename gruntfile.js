@@ -26,5 +26,5 @@ module.exports = function (grunt) {
       },
     });
 
-    grunt.registerTask('default', ['jshint','uglify']);
+    grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
 };
