@@ -10,8 +10,14 @@
 
 /*global tinymce:true */
 
-tinymce.PluginManager.add('indent', function(editor) {
-	/**
-	 * @TODO
-	 */
+var beautify = require('js-beautify').html_beautify;
+
+tinymce.PluginManager.add('sourcebeautifier', function(editor) {
+
+	editor.on('GetContent',function(evt){
+		if (evt.source_view) {
+			evt.content = beautify(evt.content);			
+		}
+	});
+
 });
