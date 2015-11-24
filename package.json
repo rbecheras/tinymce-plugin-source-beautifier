@@ -1,6 +1,6 @@
 {
   "name": "tinymce-plugin-source-beautifier",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A Plugin for the tinymce wysiwyg HTML editor that beautify the HTML source view",
   "main": "plugin.js",
   "dependencies": {
