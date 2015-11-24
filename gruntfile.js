@@ -3,16 +3,9 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-      jshint: {
-        all: ['gruntfile.js', 'plugin.js']
-      },
-      uglify: {
-        dist: {
-          files: {
-            'plugin.min.js': ['plugin.js']
-          }
-        }
-      },
+      jshint: { all: ['gruntfile.js', 'main.js'] },
+      browserify: { 'plugin.js': ['main.js'] },
+      uglify: { dist: { files: { 'plugin.min.js': ['plugin.js'] } } },
       bump: {
         options: {
           files: ['package.json','bower.json'],
